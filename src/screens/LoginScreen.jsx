@@ -40,10 +40,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#1E272E',
+    backgroundColor: '#FFF5E1',
   },
   formContainer: {
-    backgroundColor: '#2E3B38',
+    backgroundColor: '#141311',
     padding: 20,
     borderRadius: 10,
     margin: 20,

@@ -55,11 +55,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-
-    backgroundColor: '#1E272E',
+    backgroundColor: '#FFF5E1',
   },
   formContainer: {
-    backgroundColor: '#2E3B38',
+    backgroundColor: '#141311',
     padding: 20,
     borderRadius: 24,
     margin: 20,
@@ -76,15 +75,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     color: 'white',
-  },
-  confirmButton: {
-    backgroundColor: '#00D0D0',
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 10,
-    width: 150,
-    alignSelf: 'center',
-    alignItems: 'center',
   },
   redirectButton: {
     color: '#F87E2B',
