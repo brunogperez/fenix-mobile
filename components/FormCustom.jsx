@@ -14,7 +14,7 @@ export default FormCustom
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#141311',
+    backgroundColor: '#363740',
         padding: 20,
         borderRadius: 20,
         margin: 20,
