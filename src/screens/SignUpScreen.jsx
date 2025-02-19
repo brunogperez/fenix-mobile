@@ -2,13 +2,14 @@ import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import InputForm from '../../components/InputForm'
 import ButtonCustom from '../../components/ButtonCustom'
+import FormCustom from '../../components/FormCustom'
 
 const SignUpScreen = ({ navigation }) => {
 
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.formContainer}>
+      <FormCustom >
         <Text style={styles.textTitle}>Create Account</Text>
         <InputForm
           label={'First Name'}
@@ -44,7 +45,7 @@ const SignUpScreen = ({ navigation }) => {
             <Text style={{ ...styles.redirectButton }} onPress={() => navigation.navigate('LoginScreen')}>Inicia sesión</Text>
           </Pressable>
         </View>
-      </View>
+      </FormCustom>
     </SafeAreaView>
   )
 }

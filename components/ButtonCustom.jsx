@@ -4,7 +4,7 @@ import React from 'react'
 const ButtonCustom = ({ onPress, text }) => {
   return (
     <Pressable onPress={onPress} style={styles.button}>
-      <Text>{text}</Text>
+      <Text style={styles.text}>{text}</Text>
     </Pressable>
   )
 }
@@ -21,5 +21,10 @@ const styles = StyleSheet.create({
     height: 49,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  text: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 15,
   },
 })

@@ -3,12 +3,13 @@ import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper'
 import InputForm from '../../components/InputForm'
 import ButtonCustom from '../../components/ButtonCustom'
+import FormCustom from '../../components/FormCustom'
 
 const LoginScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.formContainer}>
+      <FormCustom >
         <Text style={styles.textTitle}>Welcome back!</Text>
         <Text style={styles.textSubtitle}>Enter your credentials to access your account</Text>
         <InputForm
@@ -29,7 +30,7 @@ const LoginScreen = ({ navigation }) => {
             <Text style={{ ...styles.redirectButton }} onPress={() => navigation.navigate('SignUpScreen')}>Registrate</Text>
           </Pressable>
         </View>
-      </View>
+      </FormCustom>
     </SafeAreaView>
   )
 }
@@ -42,14 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#FFF5E1',
   },
-  formContainer: {
-    backgroundColor: '#141311',
-    padding: 20,
-    borderRadius: 10,
-    margin: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
   textTitle: {
     fontSize: 24,
     fontWeight: 'bold',
