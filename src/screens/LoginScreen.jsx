@@ -2,6 +2,7 @@ import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper'
 import InputForm from '../../components/InputForm'
+import ButtonCustom from '../../components/ButtonCustom'
 
 const LoginScreen = ({ navigation }) => {
 
@@ -21,14 +22,11 @@ const LoginScreen = ({ navigation }) => {
           keyboardType={'default'}
           secureTextEntry={true}
         />
-
-        <Pressable onPress={() => console.log('Pressed')} style={styles.confirmButton}>
-          <Text>Sign in</Text>
-        </Pressable>
+        <ButtonCustom onPress={() => console.log('Pressed')} text={'Login'} />
         <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 10, gap: 10 }}>
           <Text style={styles.textSubtitle}>No tienes una cuenta?</Text>
           <Pressable >
-            <Text style={{ ...styles.redirectButton }} onPress={() => navigation.navigate('SignUpScreen')}>Sign in</Text>
+            <Text style={{ ...styles.redirectButton }} onPress={() => navigation.navigate('SignUpScreen')}>Registrate</Text>
           </Pressable>
         </View>
       </View>
@@ -63,17 +61,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
   },
-  confirmButton: {
-    backgroundColor: '#00D0D0',
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 10,
-    width: 150,
-    alignSelf: 'center',
-    alignItems: 'center',
-  },
+
   redirectButton: {
-    color: '#00D0D0',
+    color: '#F87E2B',
     fontWeight: 'bold',
     fontSize: 16,
   },
