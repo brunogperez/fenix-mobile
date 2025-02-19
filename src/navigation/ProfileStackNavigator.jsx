@@ -1,18 +1,16 @@
-import { StyleSheet } from 'react-native'
 import React from 'react'
 import LoginScreen from '../screens/LoginScreen'
 import SignUpScreen from '../screens/SignUpScreen'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-const ProfileStack = createStackNavigator()
+const Stack = createNativeStackNavigator()
 
 const ProfileStackNavigator = () => {
   return (
-    <ProfileStack.Navigator>
-      <ProfileStack.Screen name="LoginScreen" component={LoginScreen} />
-      <ProfileStack.Screen name="SignUpScreen" component={SignUpScreen} />
-    </ProfileStack.Navigator>)
+    <Stack.Navigator initialRouteName='LoginScreen'>
+      <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+    </Stack.Navigator>)
 }
 
 export default ProfileStackNavigator
-
-const styles = StyleSheet.create({})

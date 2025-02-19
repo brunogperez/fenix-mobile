@@ -17,7 +17,7 @@ const LoginScreen = ({ navigation }) => {
         </Pressable>
         <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 10, gap: 10 }}>
           <Text style={styles.textSubtitle}>No tienes una cuenta?</Text>
-          <Pressable onPress={() => navigation.navigate('SignUpScreen')}>
+          <Pressable onPress={() => navigation.openDrawer()}>
             <Text style={{ ...styles.redirectButton }}>Sign in</Text>
           </Pressable>
         </View>
