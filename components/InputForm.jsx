@@ -6,7 +6,9 @@ const InputForm = ({
   label,
   placeholder,
   keyboardType,
+  secureTextEntry
 }) => {
+
 
   return (
     <TextInput
@@ -15,6 +17,7 @@ const InputForm = ({
       placeholder={placeholder}
       keyboardType={keyboardType}
       style={styles.input}
+      secureTextEntry={secureTextEntry}
     />
   )
 }

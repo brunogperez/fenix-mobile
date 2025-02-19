@@ -19,6 +19,7 @@ const LoginScreen = ({ navigation }) => {
           label={'Password'}
           placeholder={'MyPassword123'}
           keyboardType={'default'}
+          secureTextEntry={true}
         />
 
         <Pressable onPress={() => console.log('Pressed')} style={styles.confirmButton}>

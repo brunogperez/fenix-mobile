@@ -28,11 +28,13 @@ const SignUpScreen = () => {
                     label={'Password'}
                     placeholder={'MyPassword123'}
                     keyboardType={'default'}
+                    secureTextEntry={true}
                 />
                 <InputForm
                     label={'Confirm Password'}
                     placeholder={'MyPassword123'}
                     keyboardType={'default'}
+                    secureTextEntry={true}
                 />
                 <Pressable onPress={() => console.log('Pressed')} style={styles.confirmButton}>
                     <Text>Sign in</Text>
