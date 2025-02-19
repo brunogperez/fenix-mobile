@@ -1,5 +1,6 @@
-import { Pressable, SafeAreaView, StyleSheet, Text, View, TextInput } from 'react-native'
+import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import InputForm from '../../components/InputForm'
 
 const SignUpScreen = () => {
 
@@ -8,11 +9,31 @@ const SignUpScreen = () => {
         <SafeAreaView style={styles.container}>
             <View style={styles.formContainer}>
                 <Text style={styles.textTitle}>Create Account</Text>
-                <TextInput label="First Name" style={styles.textInput} />
-                <TextInput label="Last Name" style={styles.textInput} />
-                <TextInput label="Email" style={styles.textInput} />
-                <TextInput label="Password" style={styles.textInput} />
-                <TextInput label="Confirm password" style={styles.textInput} />
+                <InputForm
+                    label={'First Name'}
+                    placeholder={'John'}
+                    keyboardType={'default'}
+                />
+                <InputForm
+                    label={'Last Name'}
+                    placeholder={'Doe'}
+                    keyboardType={'default'}
+                />
+                <InputForm
+                    label={'Email'}
+                    placeholder={'email@example.com'}
+                    keyboardType={'email'}
+                />
+                <InputForm
+                    label={'Password'}
+                    placeholder={'MyPassword123'}
+                    keyboardType={'default'}
+                />
+                <InputForm
+                    label={'Confirm Password'}
+                    placeholder={'MyPassword123'}
+                    keyboardType={'default'}
+                />
                 <Pressable onPress={() => console.log('Pressed')} style={styles.confirmButton}>
                     <Text>Sign in</Text>
                 </Pressable>
@@ -42,10 +63,6 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 24,
         margin: 20,
-    },
-    textInput: {
-        margin: 10,
-        borderRadius: 10,
     },
     textTitle: {
         fontSize: 24,
