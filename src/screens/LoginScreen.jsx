@@ -1,9 +1,8 @@
 import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 import { TextInput } from 'react-native-paper'
+import React from 'react'
 
 const LoginScreen = ({ navigation }) => {
-
 
   return (
     <SafeAreaView style={styles.container}>
@@ -17,7 +16,7 @@ const LoginScreen = ({ navigation }) => {
         </Pressable>
         <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 10, gap: 10 }}>
           <Text style={styles.textSubtitle}>No tienes una cuenta?</Text>
-          <Pressable onPress={() => navigation.openDrawer()}>
+          <Pressable onPress={() => navigation.navigate('SignUpScreen')}>
             <Text style={{ ...styles.redirectButton }}>Sign in</Text>
           </Pressable>
         </View>

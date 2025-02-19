@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ProfileStackNavigator from './ProfileStackNavigator';
@@ -19,17 +19,15 @@ const BottomTabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="Profile"
+        name="ProfileScreen"
         component={ProfileStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => (
-            <View>
-              <MaterialIcons
-                name="person"
-                size={focused ? 32 : 26}
-                color={focused ? '#00D0D0' : 'black'}
-              />
-            </View>
+            <MaterialIcons
+              name="person"
+              size={focused ? 32 : 26}
+              color={focused ? '#00D0D0' : 'black'}
+            />
           ),
         }}
       />
