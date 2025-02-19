@@ -1,5 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
-import { TextInput } from 'react-native-paper'
+import { StyleSheet, TextInput, View } from 'react-native'
 import React from 'react'
 
 const InputForm = ({
@@ -13,7 +12,6 @@ const InputForm = ({
   return (
     <TextInput
       label={label}
-      Type='outlined'
       placeholder={placeholder}
       keyboardType={keyboardType}
       style={styles.input}
@@ -32,6 +30,7 @@ const styles = StyleSheet.create({
     borderTopStartRadius: 20,
     borderTopEndRadius: 20,
     borderRadius: 20,
-    backgroundColor:'white'
+    backgroundColor: 'white',
+    paddingHorizontal: 20,
   },
 })
