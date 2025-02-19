@@ -6,7 +6,7 @@ const InputForm = ({
   label,
   placeholder,
   keyboardType,
-  secureTextEntry
+  secureTextEntry = false
 }) => {
 
 
@@ -27,8 +27,11 @@ export default InputForm
 const styles = StyleSheet.create({
   input: {
     margin: 10,
-    backgroundColor: 'white',
     width: 300,
-    height: 56
+    height: 56,
+    borderTopStartRadius: 20,
+    borderTopEndRadius: 20,
+    borderRadius: 20,
+    backgroundColor:'white'
   },
 })
