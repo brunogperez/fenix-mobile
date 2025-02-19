@@ -1,23 +1,33 @@
 import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
 import { TextInput } from 'react-native-paper'
-import React from 'react'
+import InputForm from '../../components/InputForm'
 
 const LoginScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.formContainer}>
-        <Text style={styles.textTitle}>Welcome back</Text>
+        <Text style={styles.textTitle}>Welcome back!</Text>
         <Text style={styles.textSubtitle}>Enter your credentials to access your account</Text>
-        <TextInput label="Email" style={styles.textInput} />
-        <TextInput label="Password" style={styles.textInput} />
+        <InputForm
+          label={'Email'}
+          placeholder={'email@example.com'}
+          keyboardType={'email'}
+        />
+        <InputForm
+          label={'Password'}
+          placeholder={'MyPassword123'}
+          keyboardType={'default'}
+        />
+
         <Pressable onPress={() => console.log('Pressed')} style={styles.confirmButton}>
           <Text>Sign in</Text>
         </Pressable>
         <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 10, gap: 10 }}>
           <Text style={styles.textSubtitle}>No tienes una cuenta?</Text>
-          <Pressable onPress={() => navigation.navigate('SignUpScreen')}>
-            <Text style={{ ...styles.redirectButton }}>Sign in</Text>
+          <Pressable >
+            <Text style={{ ...styles.redirectButton }} onPress={() => navigation.navigate('SignUpScreen')}>Sign in</Text>
           </Pressable>
         </View>
       </View>
@@ -31,8 +41,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    height: 200,
-    width: '100%',
     backgroundColor: '#1E272E',
   },
   formContainer: {
@@ -40,9 +48,8 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     margin: 20,
-  },
-  textInput: {
-    margin: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   textTitle: {
     fontSize: 24,
@@ -67,5 +74,6 @@ const styles = StyleSheet.create({
   redirectButton: {
     color: '#00D0D0',
     fontWeight: 'bold',
+    fontSize: 16,
   },
 })

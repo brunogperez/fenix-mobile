@@ -1,18 +1,18 @@
-import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Pressable, SafeAreaView, StyleSheet, Text, View, TextInput } from 'react-native'
 import React from 'react'
-import { TextInput } from 'react-native-paper'
 
 const SignUpScreen = () => {
 
-    
 
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.formContainer}>
-                <Text style={styles.textTitle}>Welcome back</Text>
-                <Text style={styles.textSubtitle}>Enter your credentials to access your account</Text>
+                <Text style={styles.textTitle}>Create Account</Text>
+                <TextInput label="First Name" style={styles.textInput} />
+                <TextInput label="Last Name" style={styles.textInput} />
                 <TextInput label="Email" style={styles.textInput} />
                 <TextInput label="Password" style={styles.textInput} />
+                <TextInput label="Confirm password" style={styles.textInput} />
                 <Pressable onPress={() => console.log('Pressed')} style={styles.confirmButton}>
                     <Text>Sign in</Text>
                 </Pressable>
@@ -40,11 +40,12 @@ const styles = StyleSheet.create({
     formContainer: {
         backgroundColor: '#2E3B38',
         padding: 20,
-        borderRadius: 10,
+        borderRadius: 24,
         margin: 20,
     },
     textInput: {
         margin: 10,
+        borderRadius: 10,
     },
     textTitle: {
         fontSize: 24,
@@ -69,5 +70,6 @@ const styles = StyleSheet.create({
     redirectButton: {
         color: '#00D0D0',
         fontWeight: 'bold',
+        fontSize: 16,
     },
 })

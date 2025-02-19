@@ -8,6 +8,7 @@ const Stack = createNativeStackNavigator()
 const ProfileStackNavigator = () => {
   return (
     <Stack.Navigator
+      initialRouteName='LoginScreen'
       screenOptions={{
         headerShown: false,
       }}
