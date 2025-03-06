@@ -1,9 +1,8 @@
 import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
-import { TextInput } from 'react-native-paper'
-import InputForm from '../../components/InputForm'
-import ButtonCustom from '../../components/ButtonCustom'
-import FormCustom from '../../components/FormCustom'
+import React from 'react'
+import InputForm from '../components/InputForm'
+import ButtonCustom from '../components/ButtonCustom'
+import FormCustom from '../components/FormCustom'
 
 const LoginScreen = ({ navigation }) => {
 
